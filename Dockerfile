@@ -1,11 +1,11 @@
 FROM greycilik/cilikuserbot:buster
 
-RUN git clone -b EskayUbot https://github.com/eskayaja/eskayubot /home/eskayubot/ \
-    && chmod 777 /home/eskayubot \
-    && mkdir /home/eskayubot/bin/
+RUN git clone -b gcast https://github.com/eskayaja/gcast /home/gcast/ \
+    && chmod 777 /home/gcast \
+    && mkdir /home/gcast/bin/
 
-COPY ./sample_config.env ./config.env* /home/eskayubot/
+COPY ./sample_config.env ./config.env* /home/gcast/
 
-WORKDIR /home/eskayubot/
+WORKDIR /home/gcast/
 
 CMD ["python3", "-m", "userbot"]
